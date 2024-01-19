@@ -1,5 +1,5 @@
 # react-saas-template
-Remains of a failed SaaS business I once tried to build. Now transformed into a template for building an SaaS/admin application using React + Material-UI.
+Remains of a failed SaaS business I once tried to build. Now avaible as a template for building an SaaS/admin application using React + Material-UI.
 
 ## Getting Started
 
@@ -26,7 +26,7 @@ npm install
 ```
 npm start
 ```
-Your browser should now open and show the app. Otherwise open http://localhost:3000/ in your browser. Editing files will automatically refresh the page.
+Your browser should now open and show the app. Otherwise open http://localhost:3000/ in your browser.
 
 ## Mainly Build With
 
@@ -41,11 +41,9 @@ Your browser should now open and show the app. Otherwise open http://localhost:3
 
 ## Things im currently working on
 
-* Transitioning from global jss to Material-UIs Box component
+* Making the WaveBorder responsive
+* Transitioning from the GlobalStyles component to Materia-UIs Box component
 * Improving reusability of components
-* Adding a "update balance" dialog
-* Improving look of the Footer
-* .css files -> jss
 
 ## License
 
