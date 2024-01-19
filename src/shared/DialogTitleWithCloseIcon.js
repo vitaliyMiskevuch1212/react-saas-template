@@ -5,6 +5,7 @@ import {
   IconButton,
   DialogTitle,
   Typography,
+  Avatar,
   withTheme
 } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
@@ -13,6 +14,7 @@ function DialogTitleWithCloseIcon(props) {
   const {
     theme,
     paddingBottom,
+    avatarSrc,
     onClose,
     disabled,
     title,
@@ -25,14 +27,37 @@ function DialogTitleWithCloseIcon(props) {
       }}
       className={classNames(
         "d-flex justify-content-between w-100",
-        disablePadding ? "p-0" : "pt-2"
+        avatarSrc && !disablePadding && "pt-2",
+        disablePadding ? "p-0" : null
       )}
       disableTypography
     >
-      <Typography variant="h5">{title}</Typography>
+      {avatarSrc ? (
+        <div className="d-flex align-items-center">
+          <Avatar
+            src={avatarSrc}
+            style={{
+              width: 32,
+              height: 32
+            }}
+            className="mr-2"
+          />
+          <b>
+            <Typography variant="h5">{title}</Typography>
+          </b>
+        </div>
+      ) : (
+        <b>
+          <Typography variant="h5">{title}</Typography>
+        </b>
+      )}
       <IconButton
         onClick={onClose}
-        style={{ marginRight: -12, marginTop: -10 }}
+        style={
+          avatarSrc
+            ? { marginRight: -12 }
+            : { marginRight: -12, marginTop: -10 }
+        }
         disabled={disabled}
       >
         <CloseIcon />
@@ -44,6 +69,7 @@ function DialogTitleWithCloseIcon(props) {
 DialogTitleWithCloseIcon.propTypes = {
   theme: PropTypes.object,
   paddingBottom: PropTypes.number,
+  avatarSrc: PropTypes.string,
   onClose: PropTypes.func,
   disabled: PropTypes.bool,
   title: PropTypes.string,
