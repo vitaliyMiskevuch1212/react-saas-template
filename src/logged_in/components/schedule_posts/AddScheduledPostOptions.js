@@ -260,7 +260,6 @@ class AddScheduledPostOptions extends PureComponent {
               }
               maxChars={2200}
               rightContent={this.printFile()}
-              emojiSet="google"
             />
           )}
         </div>
