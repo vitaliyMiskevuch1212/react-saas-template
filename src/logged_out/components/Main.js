@@ -1,7 +1,6 @@
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import { Switch, withRouter } from "react-router-dom";
-import { withStyles } from "@material-ui/core/styles";
 import AOS from "aos/dist/aos";
 import Navbar from "./Navbar";
 import PropsRoute from "../../shared/PropsRoute";
@@ -17,12 +16,6 @@ import CookieConsent from "./cookies/CookieConsent";
 import dummyBlogPosts from "../dummy_data/blogPosts";
 
 AOS.init();
-
-const styles = theme => ({
-  wrapper: {
-    backgroundColor: theme.palette.common.white
-  }
-});
 
 class Main extends PureComponent {
   state = {
@@ -115,7 +108,7 @@ class Main extends PureComponent {
   };
 
   render() {
-    const { location, classes } = this.props;
+    const { location } = this.props;
     const {
       selectedTab,
       mobileDrawerOpen,
@@ -124,7 +117,7 @@ class Main extends PureComponent {
       cookieRulesDialogOpen
     } = this.state;
     return (
-      <div className={classes.wrapper}>
+      <div className="bg-white">
         {!cookieRulesDialogOpen && (
           <CookieConsent
             handleCookieRulesDialogOpen={this.handleCookieRulesDialogOpen}
@@ -190,8 +183,7 @@ class Main extends PureComponent {
 }
 
 Main.propTypes = {
-  location: PropTypes.object.isRequired,
-  classes: PropTypes.object.isRequired
+  location: PropTypes.object.isRequired
 };
 
-export default withStyles(styles, { withTheme: true })(withRouter(Main));
+export default withRouter(Main);

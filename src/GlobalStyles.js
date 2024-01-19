@@ -3,7 +3,7 @@ import { withStyles } from "@material-ui/core/styles";
 const styles = theme => ({
   "@global": {
     /**
-     * Disable the focus outline, which is default on some browsers like
+     *  Disable the focus outline, which is default on some browsers like
      * chrome when focusing elements
      */
     "*:focus": {
@@ -11,6 +11,27 @@ const styles = theme => ({
     },
     ".d-block": {
       display: "block !important"
+    },
+    ".text-black": {
+      color: `${theme.palette.common.black} !important`
+    },
+    ".bg-black": {
+      backgroundColor: `${theme.palette.common.black} !important`
+    },
+    ".bg-primary-main": {
+      backgroundColor: `${theme.palette.primary.main} !important`
+    },
+    ".bg-secondary-main": {
+      backgroundColor: `${theme.palette.secondary.main} !important`
+    },
+    ".bg-white": {
+      backgroundColor: `${theme.palette.common.white} !important`
+    },
+    ".no-decoration": {
+      textDecoration: "none !important"
+    },
+    ".shadow-none": {
+      boxShadow: "none !important"
     },
     ".w-auto": {
       width: "auto !important"
@@ -29,6 +50,10 @@ const styles = theme => ({
     },
     ".h-100": {
       height: "100% !important"
+    },
+    ".avatar-24": {
+      width: "24px !important",
+      height: "24px !important"
     },
     ".text-white": {
       color: `${theme.palette.common.white} !important`
@@ -437,6 +462,14 @@ const styles = theme => ({
       marginBottom: `${theme.spacing(5)}px !important`,
       marginLeft: `${theme.spacing(5)}px !important`
     },
+    ".link": {
+      transition: `background-color ${theme.transitions.easing.easeInOut} ${theme.transitions.duration.complex}ms`,
+      cursor: "pointer",
+      color: theme.palette.primary.main,
+      "&:hover": {
+        color: theme.palette.primary.dark
+      }
+    },
     ".d-none": {
       display: "none !important"
     },
@@ -453,6 +486,75 @@ const styles = theme => ({
     },
     ".font-bold": {
       fontWeight: theme.typography.fontWeightMedium
+    },
+    ".white-bg": {
+      backgroundColor: "#FFFFFF"
+    },
+    ".container": {
+      width: "100%",
+      paddingRight: theme.spacing(4),
+      paddingLeft: theme.spacing(4),
+      marginRight: "auto",
+      marginLeft: "auto",
+      [theme.breakpoints.up("sm")]: {
+        maxWidth: 540
+      },
+      [theme.breakpoints.up("md")]: {
+        maxWidth: 720
+      },
+      [theme.breakpoints.up("lg")]: {
+        maxWidth: 1170
+      }
+    },
+    ".row": {
+      display: "flex",
+      flexWrap: "wrap",
+      marginRight: -theme.spacing(2),
+      marginLeft: -theme.spacing(2)
+    },
+    ".container-fluid": {
+      width: "100%",
+      paddingRight: theme.spacing(2),
+      paddingLeft: theme.spacing(2),
+      marginRight: "auto",
+      marginLeft: "auto",
+      maxWidth: 1370
+    },
+    ".lg-mg-top": {
+      marginTop: `${theme.spacing(20)}px !important`,
+      [theme.breakpoints.down("md")]: {
+        marginTop: `${theme.spacing(18)}px !important`
+      },
+      [theme.breakpoints.down("sm")]: {
+        marginTop: `${theme.spacing(16)}px !important`
+      },
+      [theme.breakpoints.down("xs")]: {
+        marginTop: `${theme.spacing(14)}px !important`
+      }
+    },
+    ".lg-mg-bottom": {
+      marginBottom: `${theme.spacing(20)}px !important`,
+      [theme.breakpoints.down("md")]: {
+        marginBottom: `${theme.spacing(18)}px !important`
+      },
+      [theme.breakpoints.down("sm")]: {
+        marginBottom: `${theme.spacing(16)}px !important`
+      },
+      [theme.breakpoints.down("xs")]: {
+        marginBottom: `${theme.spacing(14)}px !important`
+      }
+    },
+    ".lg-p-top": {
+      paddingTop: `${theme.spacing(20)}px !important`,
+      [theme.breakpoints.down("md")]: {
+        paddingTop: `${theme.spacing(18)}px !important`
+      },
+      [theme.breakpoints.down("sm")]: {
+        paddingTop: `${theme.spacing(16)}px !important`
+      },
+      [theme.breakpoints.down("xs")]: {
+        paddingTop: `${theme.spacing(14)}px !important`
+      }
     }
   }
 });

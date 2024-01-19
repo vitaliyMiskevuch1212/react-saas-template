@@ -25,15 +25,11 @@ const styles = theme => ({
   tableWrapper: {
     overflowX: "auto"
   },
+  blackBackground: {
+    backgroundColor: theme.palette.primary.main
+  },
   alignRight: {
     flexDirection: "row-reverse"
-  },
-  blackIcon: {
-    color: theme.palette.common.black
-  },
-  avatar: {
-    width: 24,
-    height: 24
   }
 });
 
@@ -99,7 +95,7 @@ class CustomTable extends PureComponent {
     }, 1500);
   };
 
-  handleChangePage = (_, page) => {
+  handleChangePage = (event, page) => {
     this.setState({ page });
   };
 
@@ -109,7 +105,7 @@ class CustomTable extends PureComponent {
     });
   };
 
-  handleDeleteTargetDialogOpen = (_, name) => {
+  handleDeleteTargetDialogOpen = (id, name) => {
     this.setState({
       deleteTargetDialogOpen: true,
       deleteTargetDialogName: name
@@ -119,7 +115,7 @@ class CustomTable extends PureComponent {
   /**
    * Sets the variable is_activated in the db of the target to the second parameter
    */
-  toggleTarget = (_, activate) => {
+  toggleTarget = (id, activate) => {
     const { pushMessageToSnackbar } = this.props;
     if (activate) {
       pushMessageToSnackbar({
@@ -134,7 +130,7 @@ class CustomTable extends PureComponent {
 
   printTable = () => {
     const { order, orderBy, page } = this.state;
-    const { targets, classes } = this.props;
+    const { targets } = this.props;
     if (targets.length > 0) {
       return (
         <Table aria-labelledby="tableTitle">
@@ -154,10 +150,7 @@ class CustomTable extends PureComponent {
               .map((row, index) => (
                 <TableRow hover tabIndex={-1} key={index}>
                   <TableCell component="th" scope="row" className="pl-3">
-                    <Avatar
-                      className={classes.avatar}
-                      src={row.profilePicUrl}
-                    />
+                    <Avatar className="avatar-24" src={row.profilePicUrl} />
                   </TableCell>
                   <TableCell component="th" scope="row">
                     {row.name}
@@ -182,9 +175,7 @@ class CustomTable extends PureComponent {
                           parameters={[row.id, false]}
                         >
                           <IconButton className="p-1">
-                            <PauseCircleOutlineIcon
-                              className={classes.blackIcon}
-                            />
+                            <PauseCircleOutlineIcon className="text-black" />
                           </IconButton>
                         </ClickableComponent>
                       ) : (
@@ -202,7 +193,7 @@ class CustomTable extends PureComponent {
                         parameters={[row.id, row.name]}
                       >
                         <IconButton className="p-1">
-                          <DeleteIcon className={classes.blackIcon} />
+                          <DeleteIcon className="text-black" />
                         </IconButton>
                       </ClickableComponent>
                     </div>
@@ -274,7 +265,7 @@ class CustomTable extends PureComponent {
 }
 
 CustomTable.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object,
   targets: PropTypes.array,
   pushMessageToSnackbar: PropTypes.func
 };

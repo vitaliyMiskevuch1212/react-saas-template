@@ -57,8 +57,7 @@ const styles = theme => ({
     }
   },
   wrapper: {
-    position: "relative",
-    backgroundColor: theme.palette.secondary.main
+    position: "relative"
   },
   image: {
     maxWidth: "100%",
@@ -93,7 +92,12 @@ function HeadSection(props) {
   };
   return (
     <Fragment>
-      <div className={classNames("lg-p-top pb-2", classes.wrapper)}>
+      <div
+        className={classNames(
+          "lg-p-top bg-secondary-main pb-2",
+          classes.wrapper
+        )}
+      >
         <div className={classNames("container-fluid", classes.container)}>
           <div className="row">
             <Card

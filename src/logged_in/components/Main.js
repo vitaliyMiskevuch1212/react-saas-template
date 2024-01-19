@@ -36,7 +36,6 @@ import profilePicture from "../dummy_data/images/profilePicture.jfif";
 const styles = theme => ({
   appBar: {
     boxShadow: theme.shadows[6],
-    backgroundColor: theme.palette.common.white,
     transition: theme.transitions.create(["width", "margin"], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen
@@ -87,10 +86,7 @@ const styles = theme => ({
       minHeight: 56
     }
   },
-  accountAvatar: {
-    backgroundColor: theme.palette.secondary.main,
-    height: 24,
-    width: 24,
+  addAccountAvatar: {
     marginLeft: theme.spacing(2),
     marginRight: theme.spacing(2),
     [theme.breakpoints.down("xs")]: {
@@ -515,7 +511,10 @@ class Main extends PureComponent {
             this.getPushMessageFunctionFromChildComponent
           }
         />
-        <AppBar position="sticky" className={classes.appBar}>
+        <AppBar
+          position="sticky"
+          className={classNames("bg-white", classes.appBar)}
+        >
           <Toolbar
             className={classNames(
               classes.appBarToolbar,
@@ -555,7 +554,10 @@ class Main extends PureComponent {
                 <Avatar
                   alt=""
                   src={profilePicture}
-                  className={classNames(classes.accountAvatar)}
+                  className={classNames(
+                    "bg-secondary-main avatar-24",
+                    classes.addAccountAvatar
+                  )}
                 />
                 {isWidthUp("sm", width) && (
                   <ListItemText

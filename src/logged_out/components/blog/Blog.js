@@ -19,9 +19,6 @@ const styles = theme => ({
   },
   wrapper: {
     minHeight: "60vh"
-  },
-  noDecoration: {
-    textDecoration: "none !important"
   }
 });
 
