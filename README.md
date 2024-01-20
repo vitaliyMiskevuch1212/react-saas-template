@@ -56,6 +56,7 @@ Your browser should now open and show the app. Otherwise open http://localhost:3
 - [ ] Improving the reusability of components
 - [ ] Adding a "update balance" dialog
 - [ ] Improving the look of the Footer
+- [ ] .css files -> jss
 
 ## Deployment
 
