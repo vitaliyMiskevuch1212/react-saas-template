@@ -97,6 +97,9 @@ const styles = theme => ({
 
 function HeadSection(props) {
   const { classes, theme, width } = props;
+  const openGithub = () => {
+    window.open("https://github.com/dunky11/react-saas-template");
+  };
   return (
     <Fragment>
       <div className={classNames("lg-p-top pb-2", classes.wrapper)}>
@@ -132,7 +135,7 @@ function HeadSection(props) {
                           fullWidth
                           className={classes.extraLargeButton}
                           classes={{ label: classes.extraLargeButtonLabel }}
-                          href="https://github.com/dunky11/react-saas-template"
+                          onClick={openGithub}
                         >
                           Download from GitHub
                         </Button>
