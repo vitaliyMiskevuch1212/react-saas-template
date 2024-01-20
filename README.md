@@ -1,46 +1,35 @@
-# React SaaS Template
-Remains of a SaaS business I once tried to build. Now transformed into a template for building an SaaS/admin application using React + Material-UI.
+# react-saas-template
+Remains of a failed SaaS business I once tried to build. Now transformed into a template for building an SaaS/admin application using React + Material-UI.
 
 ## Getting Started
 
 ### Prerequisites
 
-#### Node.js
+Node.js
 
-* Linux:
-
-   ```
-   sudo apt install nodejs
-   ```
-
-* Windows or macOS:
-
-   https://nodejs.org/en/
+```
+sudo apt install nodejs
+```
 
 ### Installing
 
 1. Clone the repository
-
-   ```
-   git clone https://github.com/dunky11/react-saas-template
-   cd react-saas-template
-   ```
-2. Install dependencies, this can take a minute
-
-   ```
-   npm install
-   ```
+```
+git clone https://github.com/dunky11/react-saas-template
+cd react-saas-template
+```
+2. Install dependencies
+```
+npm install
+```
 3. Start the local server
-
-   ```
-   npm start
-   ```
-
+```
+npm start
+```
 Your browser should now open and show the app. Otherwise open http://localhost:3000/ in your browser. Editing files will automatically refresh the page.
 
-## Build With
+## Mainly Build With
 
-* [Create-React-App](https://github.com/facebook/create-react-app) - Used to bootstrap the development
 * [Material-UI](https://github.com/mui-org/material-ui) - Material Design components
 * [React-Router](https://github.com/ReactTraining/react-router) - Routing of the app
 * [Pace](https://github.com/HubSpot/pace) - Loading bar at the top
@@ -52,21 +41,11 @@ Your browser should now open and show the app. Otherwise open http://localhost:3
 
 ## Things im currently working on
 
-- [ ] Transitioning from global jss to Material-UIs Box component
-- [ ] Improving reusability of components
-- [ ] Adding a "update balance" dialog
-- [ ] Improving look of the Footer
-- [ ] .css files -> jss
-
-## Deployment
-
-If you are happy with the state of your website you can run:
-
-```
-npm run build
-```
-
-It will create a build folder with your compiled project. After that copy its content into your webroot and you are ready to go.
+* Transitioning from global jss to Material-UIs Box component
+* Improving reusability of components
+* Adding a "update balance" dialog
+* Improving look of the Footer
+* .css files -> jss
 
 ## License
 
