@@ -286,17 +286,11 @@ class Imagecropper extends PureComponent {
             this.cropper = element;
           }}
           src={src}
-          // Cropper.js options
           guides={false}
           zoomable={false}
           viewMode={3}
           aspectRatio={aspectRatio}
           cropmove={
-            /**
-             * If a fixed aspect ratio is set(Story) we will use it,
-             * otherwise (Picture) we will use this function to get a picture
-             * between 1:1 and 16/9 (still have to find out).
-             */
             aspectRatio
               ? null
               : () => {
@@ -321,8 +315,8 @@ class Imagecropper extends PureComponent {
 }
 
 Imagecropper.propTypes = {
-  classes: PropTypes.object,
-  baseColor: PropTypes.string.isRequired,
+  classes: PropTypes.object.isRequired,
+  color: PropTypes.string.isRequired,
   src: PropTypes.string,
   onCrop: PropTypes.func,
   setCropFunction: PropTypes.func,
