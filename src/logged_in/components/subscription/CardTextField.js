@@ -5,7 +5,7 @@ import images from "react-payment-inputs/images";
 
 const styles = theme => ({});
 
-function CardTextField() {
+function CardTextField(props) {
   const {
     wrapperProps,
     getCardImageProps,
