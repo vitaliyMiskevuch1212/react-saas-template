@@ -52,11 +52,8 @@ Your browser should now open and show the app. Otherwise open http://localhost:3
 
 ## Things im currently working on
 
-- [ ] Transitioning from global jss to Material-UIs Box component
 - [ ] Improving the reusability of components
 - [ ] Adding a "update balance" dialog
-- [ ] Improving the look of the Footer
-- [ ] .css files -> jss
 
 ## Deployment
 
@@ -66,8 +63,8 @@ If you are happy with the state of your website you can run:
 npm run build
 ```
 
-It will create a build folder with your compiled project. After that copy its content into your webroot and you are ready to go.
+It will create a folder named build with your compiled project inside. After that copy its content into your webroot and you are ready to go.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/dunky11/react-saas-template/blob/master/LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/dunky11/react-saas-template/blob/master/LICENSE) file for details.
