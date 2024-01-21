@@ -20,7 +20,7 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-react-app": "^9.1.1",
     "bfj": "6.1.1",
-    "case-sensitive-paths-webpack-plugin": "2.3.0",
+    "case-sensitive-paths-webpack-plugin": "2.2.0",
     "classnames": "^2.2.6",
     "css-loader": "3.4.2",
     "date-fns": "^2.9.0",
@@ -40,9 +40,9 @@
     "mini-css-extract-plugin": "0.9.0",
     "optimize-css-assets-webpack-plugin": "5.0.1",
     "pnp-webpack-plugin": "1.6.0",
-    "postcss-flexbugs-fixes": "4.1.0",
+    "postcss-flexbugs-fixes": "4.2.0",
     "postcss-loader": "3.0.0",
-    "postcss-preset-env": "6.5.0",
+    "postcss-preset-env": "6.7.0",
     "postcss-safe-parser": "4.0.2",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
@@ -124,7 +124,7 @@
   "devDependencies": {
     "browserslist": "^4.8.7",
     "caniuse-lite": "^1.0.30001027",
-    "react-dev-utils": "^7.0.5"
+    "react-dev-utils": "^10.1.0"
   },
   "repository": {
     "type": "git",
