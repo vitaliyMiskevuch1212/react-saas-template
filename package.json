@@ -15,7 +15,7 @@
     "aos": "^2.3.4",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^25.1.0",
-    "babel-loader": "8.0.5",
+    "babel-loader": "8.0.6",
     "babel-plugin-named-asset-import": "^0.3.6",
     "babel-polyfill": "^6.26.0",
     "babel-preset-react-app": "^9.1.1",
@@ -42,7 +42,7 @@
     "pnp-webpack-plugin": "1.6.0",
     "postcss-flexbugs-fixes": "4.1.0",
     "postcss-loader": "3.0.0",
-    "postcss-preset-env": "6.7.0",
+    "postcss-preset-env": "6.5.0",
     "postcss-safe-parser": "4.0.2",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
@@ -124,7 +124,7 @@
   "devDependencies": {
     "browserslist": "^4.8.7",
     "caniuse-lite": "^1.0.30001027",
-    "react-dev-utils": "^10.1.0"
+    "react-dev-utils": "^7.0.5"
   },
   "repository": {
     "type": "git",
