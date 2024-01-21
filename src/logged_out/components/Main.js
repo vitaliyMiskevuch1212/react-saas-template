@@ -38,8 +38,7 @@ class Main extends PureComponent {
 
   selectHome = () => {
     smoothScrollTop();
-    document.title =
-      "WaVer - Free template for building an SaaS or admin application using React and Material-UI";
+    document.title = "WaVer - React template for an SaaS app";
     this.setState({ selectedTab: "Home" });
   };
 
