@@ -33,7 +33,7 @@
     "html-webpack-plugin": "4.0.0-beta.11",
     "identity-obj-proxy": "3.0.0",
     "jest": "^25.1.0",
-    "jest-pnp-resolver": "1.2.1",
+    "jest-pnp-resolver": "1.0.2",
     "jest-resolve": "23.6.0",
     "jest-watch-typeahead": "^0.4.2",
     "js-cookie": "^2.2.0",
@@ -123,7 +123,7 @@
   "devDependencies": {
     "browserslist": "^4.8.6",
     "caniuse-lite": "^1.0.30001027",
-    "react-dev-utils": "^7.0.5"
+    "react-dev-utils": "^10.2.0"
   },
   "repository": {
     "type": "git",
