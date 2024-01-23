@@ -13,29 +13,31 @@ const LoggedOutComponent = lazy(() => import("./logged_out/components/Main"));
 
 function App() {
   return (
-    <BrowserRouter>
-      <MuiThemeProvider theme={theme}>
-        {/* Roboto is used by Material-UI, Baloo+Bhaijaan is used for the brand
+    <div>
+      <BrowserRouter>
+        <MuiThemeProvider theme={theme}>
+          {/* Roboto is used by Material-UI, Baloo+Bhaijaan is used for the brand
             name in the navigation */}
-        <link
-          href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Roboto:300,400,500&display=swap"
-          rel="stylesheet"
-        />
-        <CssBaseline />
-        <GlobalStyles />
-        <Pace color={theme.palette.primary.light} />
-        <Suspense fallback={<Fragment />}>
-          <Switch>
-            <Route path="/c">
-              <LoggedInComponent />
-            </Route>
-            <Route>
-              <LoggedOutComponent />
-            </Route>
-          </Switch>
-        </Suspense>
-      </MuiThemeProvider>
-    </BrowserRouter>
+          <link
+            href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Roboto:300,400,500&display=swap"
+            rel="stylesheet"
+          />
+          <CssBaseline />
+          <GlobalStyles />
+          <Pace color={theme.palette.primary.light} />
+          <Suspense fallback={<Fragment />}>
+            <Switch>
+              <Route path="/c">
+                <LoggedInComponent />
+              </Route>
+              <Route>
+                <LoggedOutComponent />
+              </Route>
+            </Switch>
+          </Suspense>
+        </MuiThemeProvider>
+      </BrowserRouter>
+    </div>
   );
 }
 
