@@ -159,7 +159,6 @@ function Footer(props) {
       <WaveBorder
         upperColor="#FFFFFF"
         lowerColor={theme.palette.common.darkBlack}
-        animationNegativeDelay={4}
       />
       <div className={classes.footerInner}>
         <Grid container spacing={3}>
