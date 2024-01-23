@@ -63,6 +63,7 @@ Your browser should now open and show the app. Otherwise open http://localhost:3
 - [ ] Improving the reusability of components
 - [ ] Adding a "update balance" dialog
 - [ ] Improve acessability for screen readers
+- [ ] Disable ripple effect when info icon in footer is clicked
 - [ ] Fix tumblr social icon not working properly
 
  
