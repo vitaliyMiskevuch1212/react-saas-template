@@ -32,7 +32,7 @@ class VertOptions extends PureComponent {
 
   render() {
     const { open } = this.state;
-    const { items, classes, color } = this.props;
+    const { items, classes } = this.props;
     const id = open ? "scroll-playground" : null;
     return (
       <Fragment>
@@ -41,10 +41,10 @@ class VertOptions extends PureComponent {
           buttonRef={node => {
             this.anchorEl = node;
           }}
-          style={{ color: color ? color : null }}
+          className="text-white"
           aria-describedby={id}
         >
-          <MoreVertIcon style={{ color: color ? color : null }} />
+          <MoreVertIcon />
         </IconButton>
         <Popover
           id={id}
@@ -84,8 +84,7 @@ class VertOptions extends PureComponent {
 
 VertOptions.propTypes = {
   items: PropTypes.arrayOf(PropTypes.object).isRequired,
-  classes: PropTypes.object.isRequired,
-  color: PropTypes.string
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(VertOptions);
