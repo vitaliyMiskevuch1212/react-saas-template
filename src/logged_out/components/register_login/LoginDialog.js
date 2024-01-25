@@ -61,7 +61,7 @@ class LoginDialog extends PureComponent {
     } else {
       setTimeout(() => {
         history.push("/c/dashboard");
-      }, 150);
+      }, 1500);
     }
   };
 

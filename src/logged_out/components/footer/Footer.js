@@ -167,7 +167,7 @@ function Footer(props) {
                   <TextField
                     variant="outlined"
                     multiline
-                    placeholder="Get in touch with us"
+                    placeholder="Send us a message"
                     rows={4}
                     InputProps={{ className: classes.whiteBg }}
                     fullWidth
