@@ -156,7 +156,11 @@ class Main extends PureComponent {
           selectHome={this.selectHome}
           selectBlog={this.selectBlog}
         />
-        <Footer />
+        <Footer
+          openLoginDialog={this.openLoginDialog}
+          openRegisterDialog={this.openRegisterDialog}
+          handleCookieRulesDialogOpen={this.handleCookieRulesDialogOpen}
+        />
       </div>
     );
   }
