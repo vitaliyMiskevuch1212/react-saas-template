@@ -82,7 +82,7 @@ It will create a folder named build with your compiled project inside. After tha
 - [ ] Improving the reusability of components
 - [ ] Adding a "update balance" dialog
 - [ ] smoothScrollTop() sometimes stops scrolling top when components with big height are still rendering
-- [ ] When a Dialog/Modal is opened there is a margin on the right side of the viewport
+- [ ] Add fullscreen zoom effect on click for BlogPost images
 
 ## License
 
