@@ -151,13 +151,7 @@ class NavBar extends PureComponent {
 
   render() {
     const { mobileOpen, sideDrawerOpen } = this.state;
-    const {
-      selectedTab,
-      messages,
-      classes,
-      width,
-      openAddBalanceDialog
-    } = this.props;
+    const { selectedTab, messages, classes, width } = this.props;
     const menuItems = [
       {
         link: "/c/dashboard",
@@ -265,10 +259,7 @@ class NavBar extends PureComponent {
             >
               {isWidthUp("sm", width) && (
                 <Box mr={3}>
-                  <Balance
-                    balance={2573}
-                    openAddBalanceDialog={openAddBalanceDialog}
-                  />
+                  <Balance balance={2573} />
                 </Box>
               )}
               <MessagePopperButton messages={messages} />
@@ -361,8 +352,7 @@ NavBar.propTypes = {
   messages: PropTypes.arrayOf(PropTypes.object).isRequired,
   selectedTab: PropTypes.string.isRequired,
   width: PropTypes.string.isRequired,
-  classes: PropTypes.object.isRequired,
-  openAddBalanceDialog: PropTypes.func.isRequired
+  classes: PropTypes.object.isRequired
 };
 
 export default withWidth()(withStyles(styles, { withTheme: true })(NavBar));

@@ -7,7 +7,6 @@ import NavBar from "./navigation/NavBar";
 import ConsecutiveSnackbarMessages from "../../shared/components/ConsecutiveSnackbarMessages";
 import smoothScrollTop from "../../shared/functions/smoothScrollTop";
 import persons from "../dummy_data/persons";
-import LazyLoadAddBalanceDialog from "./subscription/LazyLoadAddBalanceDialog";
 
 const styles = theme => ({
   main: {
@@ -42,8 +41,7 @@ class Main extends PureComponent {
     posts: [],
     targets: [],
     messages: [],
-    isAccountActivated: false,
-    addBalanceDialogOpen: false
+    isAccountActivated: false
   };
 
   componentDidMount() {
@@ -71,14 +69,6 @@ class Main extends PureComponent {
       targets.push(target);
     }
     this.setState({ targets });
-  };
-
-  openAddBalanceDialog = () => {
-    this.setState({ addBalanceDialogOpen: true });
-  };
-
-  closeAddBalanceDialog = () => {
-    this.setState({ addBalanceDialogOpen: false });
   };
 
   fetchRandomStatistics = () => {
@@ -302,20 +292,11 @@ class Main extends PureComponent {
       posts,
       targets,
       isAccountActivated,
-      messages,
-      addBalanceDialogOpen
+      messages
     } = this.state;
     return (
       <Fragment>
-        <LazyLoadAddBalanceDialog
-          open={addBalanceDialogOpen}
-          onClose={this.closeAddBalanceDialog}
-        />
-        <NavBar
-          selectedTab={selectedTab}
-          messages={messages}
-          openAddBalanceDialog={this.openAddBalanceDialog}
-        />
+        <NavBar selectedTab={selectedTab} messages={messages} />
         <ConsecutiveSnackbarMessages
           getPushMessageFromChild={this.getPushMessageFromChild}
         />
