@@ -12,7 +12,7 @@ import fetchIpData from "./fetchIpData";
 
 const styles = (theme) => ({
   snackbarContent: {
-    borderBottomLeftRadius: 0,
+    borderBotttomLeftRadius: 0,
     borderBottomRightRadius: 0,
     paddingLeft: theme.spacing(3),
     paddingRight: theme.spacing(3),
