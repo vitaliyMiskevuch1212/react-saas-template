@@ -30,6 +30,7 @@ import MessagePopperButton from "./MessagePopperButton";
 import SideDrawer from "./SideDrawer";
 import Balance from "./Balance";
 import NavigationDrawer from "../../../shared/components/NavigationDrawer";
+import profilePicture from "../../dummy_data/images/profilePicture.jpg";
 
 const styles = (theme) => ({
   appBar: {
@@ -267,7 +268,7 @@ function NavBar(props) {
             >
               <Avatar
                 alt="profile picture"
-                src={`${process.env.PUBLIC_URL}/images/logged_in/profilePicture.jpg`}
+                src={profilePicture}
                 className={classNames(classes.accountAvatar)}
               />
               {isWidthUp("sm", width) && (

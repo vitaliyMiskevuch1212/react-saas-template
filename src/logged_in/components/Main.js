@@ -64,7 +64,7 @@ function Main(props) {
         number3: Math.floor(Math.random() * 251),
         number4: Math.floor(Math.random() * 251),
         name: randomPerson.name,
-        profilePicUrl: randomPerson.src,
+        profilePicUrl: randomPerson.profilePicUrl,
         isActivated: Math.round(Math.random()) ? true : false,
       };
       targets.push(target);
@@ -180,7 +180,7 @@ function Main(props) {
       const person = persons[i];
       const message = {
         id: i,
-        src: person.src,
+        profilePicUrl: person.profilePicUrl,
         date: curUnix,
         text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr sed.",
       };
@@ -203,7 +203,7 @@ function Main(props) {
       const person = persons[i];
       const post = {
         id: i,
-        src: person.src,
+        importImage: person.importImage,
         timestamp: curUnix,
         name: person.name,
       };
