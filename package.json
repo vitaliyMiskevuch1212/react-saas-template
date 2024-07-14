@@ -14,7 +14,7 @@
     "@stripe/stripe-js": "^1.13.1",
     "aos": "^2.3.4",
     "classnames": "^2.2.6",
-    "date-fns": "^2.18.0",
+    "date-fns": "^2.17.0",
     "emoji-mart": "^3.0.1",
     "js-cookie": "^2.2.0",
     "prop-types": "^15.7.2",
@@ -42,7 +42,7 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
-    "@testing-library/user-event": "^12.8.0"
+    "@testing-library/user-event": "^12.8.1"
   },
   "scripts": {
     "start": "react-scripts start",
