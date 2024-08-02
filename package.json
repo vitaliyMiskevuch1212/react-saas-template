@@ -27,7 +27,7 @@
     "react-scripts": "^4.0.3",
     "recharts": "^2.0.9",
     "workbox-background-sync": "^6.1.2",
-    "workbox-broadcast-update": "^6.1.5",
+    "workbox-broadcast-update": "^6.1.2",
     "workbox-cacheable-response": "^6.1.2",
     "workbox-core": "^6.1.2",
     "workbox-expiration": "^6.1.2",
@@ -37,7 +37,7 @@
     "workbox-range-requests": "^6.1.2",
     "workbox-routing": "^6.1.2",
     "workbox-strategies": "^6.1.2",
-    "workbox-streams": "^6.1.2"
+    "workbox-streams": "^6.1.5"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.10",
